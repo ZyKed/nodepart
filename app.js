@@ -1,6 +1,7 @@
 const express=require('express');
 const bodyParser= require('body-parser');
 const path=require('path');
+const cors=require('cors');
 const mongoose=require('mongoose');
 const config= require('./config/database');
 const networkConfig=require('./config/network');
@@ -25,6 +26,7 @@ app.get('/',(req,res)=>{
     res.send('Invalid page/endpoint');
 });
 
+app.use(cors());
 //set static folder
 app.use(express.static(path.join(__dirname,'public')));
 

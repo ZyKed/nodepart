@@ -4,3 +4,4 @@ const User=userModel.service;
 function authenticate(username, password,callback){
     User.checkUserExists(username,password,callback);
 }
+module.exports=authenticate;

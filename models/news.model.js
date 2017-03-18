@@ -54,7 +54,7 @@ getNews=function(callback){
         if(!err)
             callback(null,result);
         else 
-            
+            callback(err,null);
 
     });
 }
